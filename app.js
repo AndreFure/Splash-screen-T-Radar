@@ -1,3 +1,4 @@
+/* splash------------------------------------ */
 let splash = document.querySelector('.splash');
 let splashOpacity = document.querySelector('.splashOpacity');
 let splashLogo = document.querySelector('.splashLogo');
@@ -18,3 +19,13 @@ window.addEventListener('DOMContentLoaded', () => {
     splash.style.marginLeft = "-100vh";
   }, 6000)
 })
+
+/* NavMenu------------------------------------ */
+
+const list = document.querySelectorAll('.list');
+function activeLink() {
+  list.forEach((item) => item.classList.remove('active'));
+  this.classList.add('active')
+}
+list.forEach((item) =>
+  item.addEventListener('click', activeLink))
